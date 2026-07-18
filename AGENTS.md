@@ -1,5 +1,15 @@
 <!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+# Agent Instructions
+
+This file is the canonical entry point for coding agents. The complete architecture and implementation rules will be added with the starter implementation.
+
+Until then:
+
+- Read the active specification before editing files.
+- Do not add dependencies without documenting the reason.
+- Preserve repository boundaries and existing conventions.
+- Never commit secrets.
+- Run all available checks before declaring work complete.
+
 <!-- END:nextjs-agent-rules -->
