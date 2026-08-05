@@ -1,11 +1,13 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { routing } from "@/shared/i18n/routing";
+import createMiddleware from "next-intl/middleware";
+import { NextRequest } from "next/server";
 
-// This function can be marked `async` if using `await` inside
-export function proxy(request: NextRequest) {
-  return NextResponse.redirect(new URL("/home", request.url));
+const intlMiddleware = createMiddleware(routing);
+
+export default function proxy(request: NextRequest) {
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: "/about/:path*",
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
